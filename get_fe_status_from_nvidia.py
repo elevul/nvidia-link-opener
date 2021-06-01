@@ -5,6 +5,7 @@ from datetime import datetime
 import yaml
 import asyncio
 import webbrowser
+from fake_useragent import UserAgent
 
 # Remember to use your own values from my.telegram.org and set them in the config.json file!
 with open("nvidia.yml", "r") as ymlfile:
@@ -13,6 +14,7 @@ with open("nvidia.yml", "r") as ymlfile:
 #Random variables
 channel_name = 'NvidiaStore'
 chosenstore = cfg['yourstore']
+ua = UserAgent()
 
 #Preparing class and objects for the monitoring
 class cards:
@@ -68,7 +70,8 @@ async def check_urls(urls, channel_name):
 
 #Function to check the current store URLs on the nvidia website and return it back to the startloop function to check against the old ones
 async def check_nvidia(targetgpus):
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'}
+    browseragent = ua.random
+    headers = {'User-Agent': browseragent}
     requesturl = "https://api.nvidia.partners/edge/product/search?page=1&limit=9&locale=" + sitelocale + "&category=GPU&manufacturer=NVIDIA&manufacturer_filter=NVIDIA~4"
     searchedproducts = requests.get(requesturl, timeout=5, headers=headers).json()['searchedProducts']
     for targetgpu in targetgpus:
