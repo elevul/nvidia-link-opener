@@ -101,7 +101,7 @@ async def startloop():
                 print(targetgpu.newretailerlink)
                 await check_urls(targetgpu.newretailerlink, channel_name)
                 targetgpu.oldretailerlink = targetgpu.newretailerlink
-        await asyncio.sleep(1)
+        await asyncio.sleep(2)
 
 #Code to start and loop the function above
 loop = asyncio.get_event_loop()
