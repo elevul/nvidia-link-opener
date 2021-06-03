@@ -17,7 +17,7 @@ card3080ti:
   name: "NVIDIA RTX 3080 Ti"
   sku: "NVGFT080T"
   ldlc:
-      oldurl: ""
+      oldurl: "https://www.ldlc.com/fiche/PB00438188.html"
   nbb:
       oldurl: ""
 card3080:
