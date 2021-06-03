@@ -6,6 +6,8 @@ import yaml
 import asyncio
 import webbrowser
 from fake_useragent import UserAgent
+import sys
+import time
 
 # Remember to use your own values from my.telegram.org and set them in the config.json file!
 with open("nvidia.yml", "r") as ymlfile:
@@ -72,7 +74,13 @@ async def check_nvidia(targetgpus):
     browseragent = ua.random
     headers = {'User-Agent': browseragent}
     requesturl = "https://api.nvidia.partners/edge/product/search?page=1&limit=9&locale=" + sitelocale + "&category=GPU&manufacturer=NVIDIA&manufacturer_filter=NVIDIA~4"
-    searchedproducts = requests.get(requesturl, timeout=5, headers=headers).json()['searchedProducts']
+    while True:
+        try:
+            searchedproducts = requests.get(requesturl, timeout=5, headers=headers).json()['searchedProducts']
+            break
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
+            time.sleep(3)
     for targetgpu in targetgpus:
         if searchedproducts['featuredProduct']["productSKU"] == targetgpu.cardsku or searchedproducts['featuredProduct']["displayName"] == targetgpu.cardname:
             retailers = searchedproducts['featuredProduct']['retailers']
