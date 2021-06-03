@@ -51,7 +51,6 @@ else:
 #Update the targetgpus variable with the cards you want to monitor
 targetgpus = [card3090ti, card3090, card3080ti, card3080, card3070ti, card3070, card3060ti]
 
-
 def print_time(*content):
     """
     Can be used as a normal print function but includes the current date and time
