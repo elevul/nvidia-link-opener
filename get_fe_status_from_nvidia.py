@@ -75,14 +75,14 @@ async def check_nvidia(targetgpus):
     requesturl = "https://api.nvidia.partners/edge/product/search?page=1&limit=9&locale=" + sitelocale + "&category=GPU&manufacturer=NVIDIA&manufacturer_filter=NVIDIA~4"
     searchedproducts = requests.get(requesturl, timeout=5, headers=headers).json()['searchedProducts']
     for targetgpu in targetgpus:
-        if searchedproducts['featuredProduct']["productSKU"] == targetgpu.cardsku:
+        if searchedproducts['featuredProduct']["productSKU"] == targetgpu.cardsku or searchedproducts['featuredProduct']["displayName"] == targetgpu.cardname:
             retailers = searchedproducts['featuredProduct']['retailers']
             for s in range(len(retailers)):
                 if retailers[s]["retailerName"] == retailerurl:
                     targetgpu.newretailerlink = retailers[s]["purchaseLink"]
         retailers = searchedproducts['productDetails']
         for s in range(len(retailers)):
-            if retailers[s]["productSKU"] == targetgpu.cardsku:
+            if retailers[s]["productSKU"] == targetgpu.cardsku or retailers[s]["displayName"] == targetgpu.cardname:
                 productretailers = retailers[s]['retailers']
                 for s in range(len(productretailers)):
                     if productretailers[s]["retailerName"] == retailerurl:
