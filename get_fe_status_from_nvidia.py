@@ -79,7 +79,7 @@ async def check_nvidia(targetgpus):
             searchedproducts = requests.get(requesturl, timeout=5, headers=headers).json()['searchedProducts']
             break
         except:
-            print("Unexpected error:", sys.exc_info()[0])
+            print_time("Unexpected error:", sys.exc_info()[0])
             time.sleep(3)
     for targetgpu in targetgpus:
         if searchedproducts['featuredProduct']["productSKU"] == targetgpu.cardsku or searchedproducts['featuredProduct']["displayName"] == targetgpu.cardname:
@@ -105,7 +105,7 @@ async def startloop():
             if targetgpu.oldretailerlink == targetgpu.newretailerlink:
                 print_time("Nothing Changed for " + targetgpu.cardname)
             else:
-                print(targetgpu.newretailerlink)
+                print_time(targetgpu.newretailerlink)
                 await check_urls(targetgpu.newretailerlink, channel_name)
                 targetgpu.oldretailerlink = targetgpu.newretailerlink
         await asyncio.sleep(2)
@@ -118,5 +118,5 @@ try:
 except KeyboardInterrupt:
     pass
 finally:
-    print("Closing Loop")
+    print_time("Closing Loop")
     loop.close()
