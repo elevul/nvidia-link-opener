@@ -102,9 +102,7 @@ async def startloop():
     while True:
         results = await check_nvidia(targetgpus)
         for targetgpu in targetgpus:
-            if targetgpu.oldretailerlink == targetgpu.newretailerlink:
-                print_time("Nothing Changed for " + targetgpu.cardname)
-            else:
+            if targetgpu.oldretailerlink != targetgpu.newretailerlink:
                 print_time(targetgpu.newretailerlink)
                 await check_urls(targetgpu.newretailerlink, channel_name)
                 targetgpu.oldretailerlink = targetgpu.newretailerlink
@@ -113,6 +111,7 @@ async def startloop():
 #Code to start and loop the function above
 loop = asyncio.get_event_loop()
 try:
+    print_time('Starting loop to check for URL changes.')
     asyncio.ensure_future(startloop())
     loop.run_forever()
 except KeyboardInterrupt:
