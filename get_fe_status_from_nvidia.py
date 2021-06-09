@@ -29,7 +29,7 @@ class cards:
 if chosenstore == 'ldlc':
     card3090ti = cards(cfg['card3090ti']['name'], cfg['card3090ti']['sku'], "", "")
     card3090 = cards(cfg['card3090']['name'], cfg['card3090']['sku'], cfg['card3090']['ldlc']['oldurl'], "")
-    card3080ti = cards(cfg['card3080ti']['name'], cfg['card3080ti']['sku'], "", "")
+    card3080ti = cards(cfg['card3080ti']['name'], cfg['card3080ti']['sku'], cfg['card3090']['ldlc']['oldurl'], "")
     card3080 = cards(cfg['card3080']['name'], cfg['card3080']['sku'], cfg['card3080']['ldlc']['oldurl'], "")
     card3070ti = cards(cfg['card3070ti']['name'], cfg['card3070ti']['sku'], "", "")
     card3070 = cards(cfg['card3070']['name'], cfg['card3070']['sku'], cfg['card3070']['ldlc']['oldurl'], "")
