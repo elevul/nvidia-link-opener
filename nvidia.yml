@@ -24,7 +24,7 @@ card3080:
   name: "NVIDIA RTX 3080"
   sku: "NVGFT080"
   ldlc:
-      oldurl: "https://www.ldlc.com/fiche/PB74583210.html"
+      oldurl: "https://www.ldlc.com/fiche/PB58743210.html"
   nbb:
       oldurl: "https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+founders+edition+fe+720779"
 card3070ti:
@@ -45,6 +45,6 @@ card3060ti:
   name: "NVIDIA RTX 3060 Ti"
   sku: "NVGFT060T"
   ldlc:
-      oldurl: "https://www.ldlc.com/fiche/PB45784578.html"
+      oldurl: "https://www.ldlc.com/fiche/PB78454578.html"
   nbb:
       oldurl: "https://www.notebooksbilliger.de/nvidia+geforce+rtx+3060+ti+fe+founders+edition+720778"
