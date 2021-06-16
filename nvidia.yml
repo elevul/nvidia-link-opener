@@ -28,7 +28,7 @@ card3080:
   name: "NVIDIA RTX 3080"
   sku: "NVGFT080"
   ldlc:
-      oldurl: "https://www.ldlc.com/fiche/PB58743210.html"
+      oldurl: "https://www.ldlc.com/fiche/PB14553200.html"
       offerid: "AR202010120164"
   nbb:
       oldurl: "https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+founders+edition+fe+720779"
@@ -44,7 +44,7 @@ card3070:
   name: "NVIDIA RTX 3070"
   sku: "NVGFT070"
   ldlc:
-      oldurl: "https://www.ldlc.com/fiche/PB84219657.html"
+      oldurl: "https://www.ldlc.com/fiche/PB78893432.html"
       offerid: "AR202010130078"
   nbb:
       oldurl: "https://www.notebooksbilliger.de/nvidia+geforce+rtx+3070+founders+edition+719482"
