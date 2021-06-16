@@ -1,5 +1,5 @@
 yourstore: "ldlc"
-apipollrate: 0.6 #in seconds
+apipollrate: 0.5 #in seconds
 card3090ti:
   name: "NVIDIA RTX 3090 Ti"
   sku: "NVGFT090T"
