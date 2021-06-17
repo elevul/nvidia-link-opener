@@ -15,7 +15,7 @@ card3090:
       oldurl: "https://www.ldlc.com/fiche/PB17620329.html"
       offerid: "AR202010120163"
   nbb:
-      oldurl: "https://www.notebooksbilliger.de/nvidia+geforce+rtx+3090+fe+founders+edition+720776"
+      oldurl: "https://www.notebooksbilliger.de/a598bc7efd456279bdddfc2f4f85f62fab886c4e/nvidia+geforce+rtx+3090+founders+edition+asd+722486"
 card3080ti:
   name: "NVIDIA RTX 3080 Ti"
   sku: "NVGFT080T"
@@ -23,7 +23,7 @@ card3080ti:
       oldurl: "https://www.ldlc.com/fiche/PB51438131.html"
       offerid: "AR202105250080"
   nbb:
-      oldurl: "https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+ti+founders+edition+fe+720777"
+      oldurl: "https://www.notebooksbilliger.de/1ef21c5111ec8d9d2092447457eee5e75f189c0a/nvidia+geforce+rtx+3080+ti+founders+edition+ewq+722488"
 card3080:
   name: "NVIDIA RTX 3080"
   sku: "NVGFT080"
@@ -31,7 +31,7 @@ card3080:
       oldurl: "https://www.ldlc.com/fiche/PB14553200.html"
       offerid: "AR202010120164"
   nbb:
-      oldurl: "https://www.notebooksbilliger.de/nvidia+geforce+rtx+3080+founders+edition+fe+720779"
+      oldurl: "https://www.notebooksbilliger.de/6c05491b1f8342d28a2b2340ebbb228d27106082/nvidia+geforce+rtx+3080+founders+edition+rtz+722491"
 card3070ti:
   name: "NVIDIA RTX 3070 Ti"
   sku: "NVGFT070T"
@@ -47,7 +47,7 @@ card3070:
       oldurl: "https://www.ldlc.com/fiche/PB78893432.html"
       offerid: "AR202010130078"
   nbb:
-      oldurl: "https://www.notebooksbilliger.de/nvidia+geforce+rtx+3070+founders+edition+719482"
+      oldurl: "https://www.notebooksbilliger.de/12d774ea45f81f28591af7a5de7e516fb16a718f/nvidia+geforce+rtx+3070+founders+edition+jkl+722492"
 card3060ti:
   name: "NVIDIA RTX 3060 Ti"
   sku: "NVGFT060T"
