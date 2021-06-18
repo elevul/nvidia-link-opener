@@ -36,8 +36,8 @@ card3070ti:
   name: "NVIDIA RTX 3070 Ti"
   sku: "NVGFT070T"
   ldlc:
-      oldurl: ""
-      offerid: ""
+      oldurl: "https://www.ldlc.com/fiche/PB14953200.html"
+      offerid: "AR202106080119"
   nbb:
       oldurl: ""
 card3070:
